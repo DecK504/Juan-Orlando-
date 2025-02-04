@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Button</title>
+    <style>
+        #videoContainer {
+            display: none;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <H1>ULTIMA HORA, JUAN ORLANDO HERNAMDEZ 
+    
+        <SPAN style="color: brown;">SERA LIBERADO EL 6 DE FEBRERO</SPAN>
+        <img src="juan.jpg" width="300">
+    </H1>
+    <button id="showVideoButton">Ver Video</button>
+    <div id="videoContainer">
+        <video width="600" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <script>
+        document.getElementById('showVideoButton').addEventListener('click', function() {
+            var videoContainer = document.getElementById('videoContainer');
+            if (videoContainer.style.display === 'none') {
+                videoContainer.style.display = 'block';
+            } else {
+                videoContainer.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
